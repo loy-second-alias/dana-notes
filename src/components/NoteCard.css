@@ -1,0 +1,94 @@
+.note-card {
+    width: 100%;
+    min-height: 120px;
+    max-height: 180px;
+    padding: 20px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.75);
+    /* Slightly more opaque than standard glass */
+    animation: note-card-enter 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.note-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(229, 123, 59, 0.15);
+    border-color: rgba(229, 123, 59, 0.3);
+}
+
+.note-card:active {
+    transform: translateY(-2px) scale(0.98);
+    transition: all 150ms ease-out;
+    color: var(--text-tertiary);
+    font-style: italic;
+}
+
+.note-content-preview::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+}
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.note-timestamp {
+    font-size: 13px;
+    color: var(--text-tertiary);
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-tertiary);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 200ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note-card:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn:hover {
+    background: rgba(229, 123, 59, 0.1);
+    color: var(--orange-dark);
+}
+
+@media (max-width: 768px) {
+    .delete-btn {
+        opacity: 1;
+        /* Always visible on mobile */
+    }
+}
+
+@keyframes note-card-enter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

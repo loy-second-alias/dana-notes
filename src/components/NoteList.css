@@ -1,0 +1,36 @@
+.note-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 100px;
+    /* Space for FAB */
+}
+
+.note-list-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    text-align: center;
+    animation: fade-in 600ms ease-out;
+}
+
+.empty-state-icon {
+    color: var(--orange-light);
+    opacity: 0.5;
+    margin-bottom: 16px;
+    width: 96px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(245, 158, 108, 0.1);
+    border-radius: 50%;
+}
+
+.empty-state-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    max-width: 240px;
+}

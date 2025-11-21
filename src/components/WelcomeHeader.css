@@ -1,0 +1,97 @@
+.welcome-header {
+    padding: 32px 16px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 1024px) {
+    .welcome-header {
+        padding: 48px 24px;
+    }
+}
+
+.welcome-message {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .welcome-message {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .welcome-message {
+        font-size: 42px;
+    }
+}
+
+.orange-gradient-text {
+    display: inline-block;
+    background: linear-gradient(90deg,
+            var(--gradient-orange-start) 0%,
+            var(--gradient-orange-mid) 25%,
+            var(--gradient-orange-end) 50%,
+            var(--gradient-orange-mid) 75%,
+            var(--gradient-orange-start) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease-in-out infinite;
+    will-change: background-position;
+}
+
+.dana-text-wrapper {
+    display: inline-block;
+    position: relative;
+    margin-left: 8px;
+    animation: breathing-glow 3s ease-in-out infinite;
+    will-change: filter;
+}
+
+.dana-text {
+    background: linear-gradient(120deg,
+            var(--gradient-purple-start) 0%,
+            var(--gradient-purple-mid) 33%,
+            var(--gradient-purple-end) 66%,
+            var(--gradient-purple-mid) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease-in-out infinite;
+    will-change: background-position;
+}
+
+.dana-text::before {
+    content: 'Dana';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(120deg, var(--gradient-purple-start) 0%, var(--gradient-purple-mid) 50%, var(--gradient-purple-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(12px);
+    opacity: 0.5;
+    z-index: -1;
+    animation: breathing-blur 3s ease-in-out infinite;
+}
+
+@keyframes breathing-blur {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        filter: blur(8px);
+    }
+
+    50% {
+        opacity: 0.6;
+        filter: blur(20px);
+    }
+}
