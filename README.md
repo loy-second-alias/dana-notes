@@ -1,6 +1,6 @@
 # ✨ Dana Notes
 
-A beautiful, personalized note-taking space, crafted just for you. 🧡
+A beautiful, personalized note-taking space.
 
 ## 🌟 Features
 
@@ -16,4 +16,4 @@ A beautiful, personalized note-taking space, crafted just for you. 🧡
 3.  Enjoy your personal space!
 
 ---
-*Made with ❤️ for Dana.*
+WOAH THOSE COMMENTS WERE NOT ME I SWEAR!
